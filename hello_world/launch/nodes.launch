@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="hello_world" type="pub_node" name="node1"/>
+  <node pkg="hello_world" type="sub_node" name="node2"/>
+</launch>

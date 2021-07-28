@@ -1,0 +1,7 @@
+<launch>
+  <param name="hello_world" textfile="$(find hello_world)/urdf/robot_arm.urdf"/>
+
+  <!-- Spawn a robot into Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+     args="-param hello_world -urdf -model one_DOF_robot" />
+</launch>
