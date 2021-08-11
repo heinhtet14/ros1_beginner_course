@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/hein/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/hein/catkin_ws/src/action_lib/include/**",
+        "/home/hein/catkin_ws/src/beginner_tutorials/include/**",
+        "/home/hein/catkin_ws/src/computer_vision/include/**",
+        "/home/hein/catkin_ws/src/example_class/include/**",
+        "/home/hein/catkin_ws/src/ros_lectures/hello_world/include/**",
+        "/home/hein/catkin_ws/src/master_robot/include/**",
+        "/home/hein/catkin_ws/src/mobile_robot_pkg/include/**",
+        "/home/hein/catkin_ws/src/pluginlib_calculator/include/**",
+        "/home/hein/catkin_ws/src/robo/include/**",
+        "/home/hein/catkin_ws/src/robot_description/include/**",
+        "/home/hein/catkin_ws/src/ros_class_1/include/**",
+        "/home/hein/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/hein/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/hein/catkin_ws/src/turtlebot3/turtlebot3_slam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
