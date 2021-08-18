@@ -8,6 +8,8 @@ int main(int argc, char** argv){
 
   ros::NodeHandle node;
 
+  
+
   ros::service::waitForService("spawn");
   ros::ServiceClient add_turtle = node.serviceClient<turtlesim::Spawn>("spawn");
   turtlesim::Spawn srv;
