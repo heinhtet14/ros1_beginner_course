@@ -22,7 +22,24 @@ int main(int argc, char** argv){
   ros::Rate rate(10.0);
   while (node.ok()){
     tf::StampedTransform transform;
+    /*try{
+    ros::Time past = ros::Time::now() - ros::Duration(5.0);
+    listener.waitForTransform("/turtle2", "/turtle1",
+                              past, ros::Duration(1.0));
+    listener.lookupTransform("/turtle2", "/turtle1",
+                             past, transform);
+    }*/
     try{
+    ros::Time now = ros::Time::now();
+    ros::Time past = now - ros::Duration(5.0);
+    listener.waitForTransform("/turtle2", now,
+                              "/turtle1", past,
+                              "/world", ros::Duration(1.0));
+    listener.lookupTransform("/turtle2", now,
+                             "/turtle1", past,
+                             "/world", transform);
+    }
+    /*try{
       ros::Time now=ros::Time::now();
       ros::Time past=ros::Time::now() - ros::Duration(5.0);
       listener.waitForTransform("/turtle2",now, "/turtle1",past,"/world", ros::Duration(1.0));      
@@ -30,7 +47,7 @@ int main(int argc, char** argv){
     	//listener.waitForTransform("/turtle2",now, "/turtle1",past, ros::Duration(1.0));
     	//listener.lookupTransform("/turtle2", "/carrot1",ros::Time(0), transform);
     	//listener.lookupTransform("/turtle2",now, "/turtle1",past, transform);
-    }
+    }*/
     catch (tf::TransformException &ex) {
       ROS_ERROR("%s",ex.what());
       ros::Duration(1.0).sleep();
